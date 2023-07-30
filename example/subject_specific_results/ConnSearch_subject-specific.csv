@@ -1,0 +1,5 @@
+Entry #,Core,BA,ROI #,Accuracy,DAN,DMN,FPCN,Limbic,SM,Uncertain,VAN,Visual
+1,R Ventral,uncertain,221,4.028,12%,31%,12%,6%,12%,6%,6%,12%
+2,L PrG,6,41,3.895,6%,12%,25%,0%,25%,6%,12%,12%
+3,L MFG,8,99,4.528,0%,25%,31%,0%,12%,6%,12%,12%
+4,L MSFG,9,114,4.219,12%,12%,19%,12%,6%,6%,0%,31%

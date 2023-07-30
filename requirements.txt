@@ -1,0 +1,10 @@
+scikit-learn
+numpy
+nilearn
+setuptools
+matplotlib
+nichord
+tqdm
+pandas
+scipy
+statsmodels
