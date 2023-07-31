@@ -1,10 +1,9 @@
 import pathlib
 import sys
 
+sys.path.append(f'{pathlib.Path(__file__).parent.parent}')  #  # to import generate_dataset
+
 from example.generate_dataset import generate_dataset
-
-sys.path.append(f'{pathlib.Path(__file__).parent.parent}')  # to import custom modules
-
 from connsearch.permute.perm_manager import Permutation_Manager
 from connsearch.components import get_connectivity_comps
 

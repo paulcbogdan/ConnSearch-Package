@@ -85,12 +85,17 @@ class ConnSearcher:
         self.Y = Y
         assert len(self.Y.shape) == 3, \
             'Y must be 3D: (subject, session, example)'
+
         self.coords = np.array(coords)
-        assert len(self.coords.shape) == 2 and self.coords.shape[1] == 3, \
+        assert (len(self.coords.shape) == 2 and self.coords.shape[1] == 3) or \
+            len(self.coords.shape) == 0, \
             'coords must be 2D: (ROI, 3), where the 3 corresponds to x, y, z'
+            # self.coords.shape == 0 is for when coordinates are not necessary
+            #   because the data will not be plotted (e.g., when running
+            #   permutations)
+
         assert (components is not None) or wu_analysis, \
             'components must be specified unless wu_analysis is True'
-
         self.components = components
         if components is None:  # Defines "components" to mirror the Wu et al.
             # (2021) analysis, which fit classifiers using

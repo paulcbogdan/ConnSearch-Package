@@ -21,6 +21,8 @@ a bit more nicely to serve as a package.
 
 `pip install connsearch`
 
+If you are installing from a fresh environment, you may find that some other packages' dependencies create 
+
 ## Tutorial
 
 The above [repo for reproducing the manuscript results](https://github.com/paulcbogdan/ConnSearch) provides a summary of the overall code structure and the different ways to use it. In contrast, the present README walks through specific pieces of from one of the examples (`example.group_level.py`).
@@ -33,7 +35,7 @@ X, Y, coords = generate_dataset(n_edges_show_effect=100)
 ```
 
 `X` is a 5D `np.array`, organized as `(subject, session, example, ROI0, ROI1)`.
-The first three dimensions correspond to a (0) participant, (1) their two sessions, and (2) their two examples per session. The last two dimensions correspond to the example's connectivity matrix. `X` is initially created by sampling from a unit normal distribution. `Y` is organized as a 3D array, organized as `(subject, session, example)`, with binary labels as values. To give the classifiers some predictors, a value is 1.0 is added to 100 random edges for all examples where `Y=0`. 
+The first three dimensions correspond to a participant, their two sessions, and their two examples per session. The last two dimensions correspond to the example's connectivity matrix. `X` is initially created by sampling from a unit normal distribution. `Y` is organized as a 3D array, organized as `(subject, session, example)`, with binary labels as values. To give the classifiers some predictors, a value is 1.0 is added to 100 random edges for all examples where `Y=0`. 
 
 ### 2. Define the components. 
 ```python

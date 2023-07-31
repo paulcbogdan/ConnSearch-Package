@@ -1,6 +1,6 @@
 import pathlib
 import sys
-sys.path.append(f'{pathlib.Path(__file__).parent.parent}')
+sys.path.append(f'{pathlib.Path(__file__).parent.parent}') # to import generate_dataset
 
 import os
 
